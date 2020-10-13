@@ -13,7 +13,7 @@ Object.keys(botCommands).map(key => {
 bot.login(TOKEN);
 
 bot.on('ready', () => {
-  console.info(`Logged in as ${bot.user.tag}!`);
+  bot.user.setActivity(`with the Death Note`,{type:"PLAYING"})
 });
 
 bot.on('message', message => {

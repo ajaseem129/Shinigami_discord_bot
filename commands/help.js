@@ -1,9 +1,19 @@
+require('dotenv').config()
+const prefix = process.env.prefix
 module.exports = {
-    name: 'help',
-    description: 'Help!',
-    aliases: ["h"],
-    execute(message, args) {
-        message.reply('This is a custom bot, prefix is r!. Currently available commands are as follows \n1. r!ping ==> Tells you how much latency you have')
-    },
-  };
-  
+	name: 'help',
+	description: 'List all of my commands or info about a specific command.',
+	aliases: ['commands','h'],
+	usage: '[command name]',
+	cooldown: 5,
+	execute(message, args) {
+        
+        const data = [];
+        const { commands } = message.client;
+
+        if (!args.length) {
+           
+        }
+
+	},
+};
